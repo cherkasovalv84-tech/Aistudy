@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#020617] text-slate-50 antialiased selection:bg-cyan-500/30;
+  }
+}
+
+.glass-card {
+  @apply bg-white/[0.03] backdrop-blur-2xl border border-white/10 shadow-2xl;
+}
+
+.neon-glow-cyan {
+  box-shadow: 0 0 30px -5px rgba(34, 211, 238, 0.4);
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-500;
+}
+
+.mesh-gradient-1 {
+  @apply absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] pointer-events-none;
+}
+
+.mesh-gradient-2 {
+  @apply absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-cyan-600/20 rounded-full blur-[120px] pointer-events-none;
+}
+
+.mesh-gradient-3 {
+  @apply absolute top-[20%] right-[10%] w-[300px] h-[300px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#020617];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+}
+
+html {
+  scroll-behavior: smooth;
+}
